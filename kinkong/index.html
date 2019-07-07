@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="css/master.css">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/timelinecss.css">
+  <script src="https://kit.fontawesome.com/d18ff6e381.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100i,300,400,500,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Allura" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="js/jquery.js" charset="utf-8"></script>
+
+  <title></title>
+</head>
+
+<body>
+
+  <nav class="row bg-light text-center">
+    <div class="col-md-4 navbar navbar-expand-md">
+      <img src="images/logo.gif" class="logo" alt="logo">
+    </div>
+    <div class="col-md-4 navbar navbar-expand-md">
+      <div class="col-md-3 icon">
+        <a class="nav-link" href="#"><i class="fas fa-home" id="icon"></i><br>HOME</a>
+      </div>
+      <div class="col-md-3 icon">
+        <a class="nav-link" href="#"><i class="fas fa-folder-open" id="icon"></i><br>BROWS</a>
+      </div>
+      <div class="col-md-3 icon">
+        <a class="nav-link" href="#"><i class="far fa-newspaper" id="icon"></i><br>NEWSFEED</a>
+      </div>
+      <div class="col-md-3 icon">
+        <a class="nav-link" href="#"><i class="fas fa-user" id="icon"></i><br>USERS</a>
+      </div>
+    </div>
+    <div class="col-md-4 navbar navbar-expand-md">
+      <button class="but" type="button" name="button">UPLOAD <span id="spanArrowUp">↑</span></button>
+    </div>
+  </nav>
+
+
+  <div class="container-fluid carscontain">
+    <div class="slideContainer">
+      <div class="mySlide">
+        <img src="images/car.jpg" class="img-fluid" alt="">
+        <img src="images/merc.jpg" onclick="openNav()" class="imgDesc" id="circleMerc">
+        <span id="infoMerc" style="font-size:30px;cursor:pointer"><i class="fas fa-angle-double-right"></i></span>
+        <div class="descrip text-center">
+          <span class="imgDesc" style="font-size:50px;color:white;">Mercedes Benz</span> <br>
+          <span class="lozungMerc">«The best or nothing»</span> <br>
+          <div class="horizontal-line mt-3"></div>
+          <div class="heart-comment">
+            <span class="heart-message"><i class="fas fa-heart"></i> 640 </span>
+            <span class="comment-message"><i class="far fa-comments"></i> 302</span>
+          </div>
+        </div>
+      </div>
+      <div class="mySlide">
+        <img src="images/car2.jpg" class="img-fluid" alt="">
+        <img src="images/ford.jpg" onclick="openNav()" class="imgDesc" id="circleFord">
+        <span id="infoFord" style="font-size:30px;cursor:pointer"><i class="fas fa-angle-double-right"></i></span>
+        <div class="descrip text-center">
+          <span class="imgDesc" style="font-size:50px;color:white;">Ford Mustang</span><br>
+          <span class="lozungFord">"Go Further"</span><br>
+          <div class="horizontal-line mt-3"></div>
+          <div class="heart-comment">
+            <span class="heart-message"><i class="fas fa-heart"></i> 760 </span>
+            <span class="comment-message"><i class="far fa-comments"></i> 156</span>
+          </div>
+        </div>
+      </div>
+      <div class="mySlide">
+        <img src="images/car3.jpg" class="img-fluid" alt="">
+        <img src="images/volk.jpg" onclick="openNav()" class="imgDesc" id="circleVolk">
+        <span id="infoVolk" style="font-size:30px;cursor:pointer"><i class="fas fa-angle-double-right"></i></span>
+        <div class="descrip text-center">
+          <span class="imgDesc" style="font-size:50px;color:white;">Volkswagen</span><br>
+          <span class="lozungVolk">"Das Auto"</span><br>
+          <div class="horizontal-line mt-3"></div>
+          <div class="heart-comment">
+            <span class="heart-message"><i class="fas fa-heart"></i> 314 </span>
+            <span class="comment-message"><i class="far fa-comments"></i> 257</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="text-center" style="height:50px">
+      <span class="digit" onclick="currentSlide(1); closeNav()" id="di">•</span>
+      <span class="digit" onclick="currentSlide(2); closeNav()" id="di">•</span>
+      <span class="digit" onclick="currentSlide(3); closeNav()" id="di">•</span>
+    </div>
+
+    <div id="mySidenav" class="sidenav">
+      <header>
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      </header>
+      <section class="author mt-4">
+        <img src="images/mista.jpg" alt="" class="rounded-circle" style="border: 2px solid white;">
+        <p class="mt-2 nickname">Vanta 8lack</p>
+        <span class="web">Web Developer from Azerbaijan</span>
+        <div class="horizontal-line2 mt-4"></div>
+        <div class="mini-slide mt-4">
+          <header class="pb-5">
+            <span class="float-left"><i class="fas fa-plus-circle"></i> CONTRIBUTE</span>
+            <span class="float-right">
+              <i class="fas fa-chevron-left left-btn"></i>
+              &nbsp;
+              <i class="fas fa-chevron-right right-btn"></i>
+            </span>
+          </header>
+          <div class="mini-images">
+            <div class="row">
+              <div class="first-page col-md-12">
+                <img src="images/merccar1.jpg" alt="">
+                <img src="images/merccar2.jpg" alt="">
+                <img src="images/fordcar1.jpg" alt="">
+                <img src="images/fordcar2.jpg" alt="">
+                <img src="images/volkcar1.jpg" alt="">
+                <img src="images/volkcar2.jpg" alt="">
+              </div>
+              <div class="second-page col-md-12">
+                <img src="images/merccar1.jpg" alt="">
+                <img src="images/merccar2.jpg" alt="">
+                <img src="images/fordcar1.jpg" alt="">
+                <img src="images/fordcar2.jpg" alt="">
+                <img src="images/volkcar1.jpg" alt="">
+                <img src="images/volkcar2.jpg" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <div class="overlay">
+    <div class="img-section" style="margin-top:200px">
+      <img style="width: 100%;" class="scaled-img">
+    </div>
+  </div>
+  <div class="row main-timeline-section">
+    <header class="col-md-12 main-header">
+      <div class="cam-vid">
+        <i class="fas fa-camera"></i>
+        <span>524</span>
+        <span>|</span>
+        <i class="fas fa-video"></i>
+        <span>102</span>
+      </div>
+      <div class="float-right main-header-right">
+        <i class="fas fa-sort-down"></i>
+        <span class="aside-dropd">June, 2019</span>
+      </div>
+    </header>
+
+    <section class="container timeline col-md-10">
+      <ul class="timeline-ul">
+        <li>
+          <div class="tl-div">
+            <time>2018</time> <img src="images/merccar1.jpg" alt="">
+
+          </div>
+        </li>
+        <li>
+          <div class="tl-div">
+            <time>2017</time> <img src="images/merccar2.jpg" alt="">
+
+          </div>
+        </li>
+        <li>
+          <div class="tl-div">
+            <time>2016</time> <img src="images/fordcar1.jpg" alt="">
+
+          </div>
+        </li>
+      </ul>
+    </section>
+
+
+    <aside class="col-md-2">
+      <div class="aside-container">
+        <header class="mt-3">
+          <i class="fas fa-sort-down"></i>
+          <span class="aside-dropd">Landscape</span>
+          <h6 class="float-right"><span class="badge badge-secondary">32</span></h6>
+        </header>
+      </div>
+      <hr>
+      <div class="aside-container users">
+        <img src="images/mista.jpg" class="rounded-circle" width="40" height="40">
+        <span>Kamran Mammadov</span><br>
+        <img src="images/mista.jpg" class="rounded-circle" width="40" height="40">
+        <span>Shamil Samedov</span><br>
+        <img src="images/mista.jpg" class="rounded-circle" width="40" height="40">
+        <span>Nicat Taghiyev</span><br>
+        <div class="horizontal-line mt-3"></div>
+        <div class="all-users mt-3">
+          <img src="images/mista.jpg" class="rounded-circle" width="50" height="50">
+          <span>Shamil Samedov</span><br>
+          <img src="images/mista.jpg" class="rounded-circle" width="50" height="50">
+          <span>Nicat Taghiyev</span><br>
+          <img src="images/mista.jpg" class="rounded-circle" width="50" height="50">
+          <span>Kamran Mammadov</span><br>
+          <img src="images/mista.jpg" class="rounded-circle" width="50" height="50">
+          <span>Shamil Samedov</span><br>
+          <img src="images/mista.jpg" class="rounded-circle" width="50" height="50">
+          <span>Nicat Taghiyev</span><br>
+          <img src="images/mista.jpg" class="rounded-circle" width="50" height="50">
+          <span>Kamran Mammadov</span><br>
+          <img src="images/mista.jpg" class="rounded-circle" width="50" height="50">
+          <span>Shamil Samedov</span><br>
+          <img src="images/mista.jpg" class="rounded-circle" width="50" height="50">
+          <span>Nicat Taghiyev</span><br>
+          <img src="images/mista.jpg" class="rounded-circle" width="50" height="50">
+          <span>Kamran Mammadov</span><br>
+          <img src="images/mista.jpg" class="rounded-circle" width="50" height="50">
+          <span>Shamil Samedov</span><br>
+          <img src="images/mista.jpg" class="rounded-circle" width="50" height="50">
+          <span>Nicat Taghiyev</span><br>
+          <img src="images/mista.jpg" class="rounded-circle" width="50" height="50">
+          <span>Nicat Taghiyev</span><br>
+          <img src="images/mista.jpg" class="rounded-circle" width="50" height="50">
+          <span>Nicat Taghiyev</span><br>
+        </div>
+      </div>
+      <div class="search-container">
+        <i class="fas fa-search"></i>
+        <input type="text" placeholder="Search...">
+      </div>
+    </aside>
+
+  </div>
+
+
+  <script>
+    (function() {
+
+      'use strict';
+
+      // define variables
+      var items = document.querySelectorAll(".timeline li");
+
+      // check if an element is in viewport
+      // http://stackoverflow.com/questions/123999/how-to-tell-if-a-dom-element-is-visible-in-the-current-viewport
+      function isElementInViewport(el) {
+        var rect = el.getBoundingClientRect();
+        return (
+          rect.top >= 0 &&
+          rect.left >= 0 &&
+          rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+          rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+        );
+      }
+
+      function callbackFunc() {
+        for (var i = 0; i < items.length; i++) {
+          if (isElementInViewport(items[i])) {
+            items[i].classList.add("in-view");
+          }
+        }
+      }
+
+      // listen for events
+      window.addEventListener("load", callbackFunc);
+      window.addEventListener("resize", callbackFunc);
+      window.addEventListener("scroll", callbackFunc);
+
+    })();
+  </script>
+  <script>
+    (function(i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r;
+      i[r] = i[r] || function() {
+        (i[r].q = i[r].q || []).push(arguments)
+      }, i[r].l = 1 * new Date();
+      a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0];
+      a.async = 1;
+      a.src = g;
+      m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-46156385-1', 'cssscript.com');
+    ga('send', 'pageview');
+  </script>
+  <script>
+    //mini img slider
+    $(".right-btn").click(function() {
+      $(".second-page").fadeToggle();
+    });
+    $(".left-btn").click(function() {
+      $(".second-page").fadeToggle();
+    });
+
+    $("#mini").click(function() {
+      var currentSrc = $(this).attr("src");
+      $(".overlay").fadeToggle();
+      $(".img-section img").attr("src", `${currentSrc}`);
+    });
+
+    $(".overlay").click(function() {
+      $(this).fadeOut();
+    });
+  </script>
+  <script>
+    //right menu toggle
+    $(document).ready(function() {
+      $("#infoMerc").click(function() {
+        $(".descrip").toggle();
+      });
+      $("#infoFord").click(function() {
+        $(".descrip").toggle();
+      });
+      $("#infoVolk").click(function() {
+        $(".descrip").toggle();
+      });
+    });
+
+    function openNav() {
+      document.getElementById("mySidenav").style.width = "450px";
+    }
+
+    function closeNav() {
+      document.getElementById("mySidenav").style.width = "0";
+    }
+  </script>
+  <script>
+    function currentSlide(n) {
+      showSlides((index = n));
+    }
+
+    function showSlides(n) {
+      var slides = document.getElementsByClassName("mySlide");
+      for (var i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      slides[index - 1].style.display = "block";
+    }
+  </script>
+  <script src='https://cdn.jsdelivr.net/scrollreveal.js/3.3.1/scrollreveal.min.js'></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+
+</html>
